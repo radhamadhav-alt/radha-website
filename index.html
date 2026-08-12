@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>बांके बिहारी लाल की जय</title>
+    <style>
+        body{background-color: lightblue;font-family: arial;}
+        h1{color:red;text-align: center;}
+        h2{color: blueviolet;text-align: center;}
+        p{color: green;font-size: 20px ;}
+        button{background-color: blue;color: white;padding: 10px 20px;border:none;border-radius: 8px;
+        }
+        nav{background-color: pink;text-align: center;padding: 12px;}
+        nav a {color: rgb(5, 5, 5); margin: 100px;}
+        nav a:hover {color: yellow;}
+        p{text-align: center;}
+        p{height: 300px;}
+        button{touch-action: auto;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1> ब्रंदावन बांके बिहारी लाल की जय </h1>
+        <h2> राधे रानी की जय </h2>
+    </header>
+    <main><h1> राधाबल्लभ लाल की जय </h1></main>
+    <nav>
+        <a href="#">होमपेज</a>
+        <a href="#">राधा</a>
+        <a href="#">बांके बिहारी</a>
+    </nav>
+    <section>
+        <button onclick="radhaNaamGinti()"> राधा नाम गिनती </button>
+        <button onclick="krishnaNaamGinti()"> कृष्ण नाम गिनती </button>
+        <h2>
+            राधा नाम जाप:
+            <span id="radhaCount">0</span>
+        </h2>
+        <h2> 
+            कृष्ण नाम जाप:
+            <span id="krishnaCount">0</span>
+        </h2>
+        <p id="message"> श्री राधा कृष्ण नाम जाप करें </p>
+    </section>
+        
+    <footer>
+        <p>कॉपीराइट 2026 </p>
+    </footer>
+    <script>
+        let radhaCount =0;
+        let krishnaCount =0;
+        function radhaNaamGinti(){radhaCount++;
+            document.getElementById("radhaCount").innerHTML=radhaCount;
+            document.getElementById("message").innerHTML="श्री राधा कृष्ण नाम जाप करें";
+        }
+        function krishnaNaamGinti(){krishnaCount++;
+            document.getElementById("krishnaCount").innerHTML=krishnaCount;
+            document.getElementById("message").innerHTML="श्री राधा कृष्ण नाम जाप करें";
+        }
+    </script>
+</body>
+</html>
