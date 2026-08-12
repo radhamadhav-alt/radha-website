@@ -1,0 +1,836 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Noto Sans Devanagari", sans-serif;
+    background: #fffaf5;
+    color: #3b1d12;
+    line-height: 1.7;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    width: 100%;
+    height: 75px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(255, 250, 245, 0.95);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 3px 20px rgba(0,0,0,0.08);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #9b2c2c;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #422018;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #c0392b;
+}
+
+.menu-btn {
+    display: none;
+
+    border: none;
+    background: none;
+
+    font-size: 28px;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at center,
+        #fff1e6,
+        #f6d4c5 50%,
+        #b76e79);
+
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "🪷";
+
+    position: absolute;
+
+    font-size: 170px;
+
+    opacity: 0.12;
+
+    top: 12%;
+    left: 8%;
+
+    animation: float 5s infinite ease-in-out;
+}
+
+.hero::after {
+    content: "🦚";
+
+    position: absolute;
+
+    font-size: 160px;
+
+    opacity: 0.12;
+
+    right: 8%;
+    bottom: 10%;
+
+    animation: float 6s infinite ease-in-out;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+
+    padding: 40px 20px;
+}
+
+.peacock {
+    font-size: 60px;
+
+    animation: float 4s infinite ease-in-out;
+}
+
+.small-title {
+    font-size: 20px;
+    color: #9b2c2c;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 78px);
+
+    line-height: 1.25;
+
+    margin: 15px 0;
+
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: #a52626;
+}
+
+.hero-text {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #9b2c2c;
+    color: white;
+}
+
+.primary-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(155,44,44,0.3);
+}
+
+.secondary-btn {
+    border: 2px solid #9b2c2c;
+    color: #9b2c2c;
+}
+
+.secondary-btn:hover {
+    background: #9b2c2c;
+    color: white;
+}
+
+
+/* ================= QUOTE ================= */
+
+.quote-section {
+    padding: 80px 7%;
+}
+
+.quote-box {
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 50px 30px;
+
+    border-radius: 25px;
+
+    background: white;
+
+    box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+}
+
+.quote-icon {
+    font-size: 55px;
+    color: #c0392b;
+}
+
+.quote-box h2 {
+    font-size: 30px;
+
+    color: #7b2424;
+
+    margin-bottom: 15px;
+}
+
+
+/* ================= SECTION ================= */
+
+.section {
+    padding: 100px 7%;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.section-heading > p {
+    color: #a52626;
+
+    font-weight: 700;
+
+    font-size: 18px;
+}
+
+.section-heading h2 {
+    font-size: 42px;
+
+    margin: 5px 0 15px;
+}
+
+.line {
+    width: 70px;
+    height: 4px;
+
+    margin: auto;
+
+    background: #c0392b;
+
+    border-radius: 20px;
+}
+
+
+/* ================= INFO CARD ================= */
+
+.info-card {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 30px;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.09);
+}
+
+.info-card.reverse {
+    grid-template-columns: 1fr 1fr;
+}
+
+.info-image {
+    min-height: 430px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(circle,
+        #fff,
+        #f4c8c8);
+}
+
+.krishna-image {
+    background:
+        radial-gradient(circle,
+        #fff,
+        #c9d9ed);
+}
+
+.image-symbol {
+    font-size: 150px;
+
+    filter: drop-shadow(0 15px 15px rgba(0,0,0,0.15));
+
+    animation: float 4s infinite ease-in-out;
+}
+
+.info-content {
+    padding: 55px;
+}
+
+.tag {
+    display: inline-block;
+
+    padding: 6px 15px;
+
+    border-radius: 30px;
+
+    background: #fde5df;
+
+    color: #a52626;
+
+    font-weight: 700;
+}
+
+.info-content h3 {
+    font-size: 32px;
+
+    margin: 18px 0;
+}
+
+.info-content p {
+    color: #684a42;
+
+    margin-bottom: 15px;
+}
+
+.special-text {
+    font-size: 28px;
+
+    font-weight: 800;
+
+    color: #a52626;
+
+    margin-top: 20px;
+}
+
+
+/* ================= JAP ================= */
+
+.jap-section {
+    padding: 100px 7%;
+
+    background:
+        linear-gradient(135deg,
+        #741f2a,
+        #b34141,
+        #5d1822);
+}
+
+.white-heading {
+    color: white;
+}
+
+.white-heading > p {
+    color: #ffd7b8;
+}
+
+.white-heading h2 {
+    color: white;
+}
+
+.light-line {
+    background: #ffd7b8;
+}
+
+.jap-container {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+.jap-card {
+    background: rgba(255,255,255,0.12);
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 25px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    color: white;
+}
+
+.jap-icon {
+    font-size: 60px;
+}
+
+.jap-card h3 {
+    font-size: 25px;
+
+    margin: 10px;
+}
+
+.counter {
+    font-size: 65px;
+
+    font-weight: 800;
+
+    margin: 15px;
+}
+
+.jap-btn {
+    border: none;
+
+    padding: 14px 30px;
+
+    border-radius: 50px;
+
+    background: white;
+
+    color: #8b252f;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.jap-btn:hover {
+    transform: scale(1.05);
+}
+
+.reset-btn {
+    display: block;
+
+    margin: 15px auto 0;
+
+    background: transparent;
+
+    border: none;
+
+    color: #ffd7b8;
+
+    cursor: pointer;
+}
+
+
+/* ================= GALLERY ================= */
+
+.gallery {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.gallery-card {
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.gallery-card:hover {
+    transform: translateY(-8px);
+}
+
+.gallery-placeholder {
+    height: 220px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 90px;
+
+    background:
+        linear-gradient(135deg,
+        #fff0e8,
+        #f4c7c7);
+}
+
+.gallery-card h3 {
+    margin-top: 15px;
+}
+
+.gallery-card p {
+    padding-bottom: 15px;
+
+    color: #98746b;
+}
+
+
+/* ================= BHAJAN ================= */
+
+.bhajan-section {
+    padding: 100px 7%;
+
+    background: #fff2e8;
+}
+
+.bhajan-card {
+    max-width: 900px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.music-icon {
+    font-size: 50px;
+}
+
+.bhajan-card div:nth-child(2) {
+    flex: 1;
+}
+
+.bhajan-card button {
+    border: none;
+
+    background: #9b2c2c;
+
+    color: white;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+    padding: 100px 7%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(135deg,
+        #48141d,
+        #8c2632);
+
+    color: white;
+}
+
+.contact-text {
+    font-size: 20px;
+}
+
+.big-radha {
+    font-size: 45px;
+
+    font-weight: 800;
+
+    margin-top: 20px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #28100e;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+.footer-logo {
+    font-size: 30px;
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin: 25px 0;
+
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #ffd7b8;
+
+    text-decoration: none;
+}
+
+.copyright {
+    color: #b99b94;
+
+    font-size: 14px;
+}
+
+
+/* ================= TOP BUTTON ================= */
+
+.top-btn {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #9b2c2c;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    display: none;
+
+    z-index: 999;
+}
+
+
+/* ================= ANIMATION ================= */
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navbar nav {
+        display: none;
+
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        background: white;
+
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .navbar nav.active {
+        display: flex;
+    }
+
+    .navbar nav a {
+        padding: 15px 25px;
+
+        border-bottom: 1px solid #eee;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-text {
+        font-size: 18px;
+    }
+
+    .section {
+        padding: 70px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .info-card,
+    .info-card.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .info-content {
+        padding: 35px 25px;
+    }
+
+    .info-image {
+        min-height: 300px;
+    }
+
+    .jap-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-placeholder {
+        height: 170px;
+    }
+
+    .bhajan-card {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .big-radha {
+        font-size: 32px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+}
