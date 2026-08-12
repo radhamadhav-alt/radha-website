@@ -1,63 +1,415 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>बांके बिहारी लाल की जय</title>
-    <style>
-        body{background-color: lightblue;font-family: arial;}
-        h1{color:red;text-align: center;}
-        h2{color: blueviolet;text-align: center;}
-        p{color: green;font-size: 20px ;}
-        button{background-color: blue;color: white;padding: 10px 20px;border:none;border-radius: 8px;
-        }
-        nav{background-color: pink;text-align: center;padding: 12px;}
-        nav a {color: rgb(5, 5, 5); margin: 100px;}
-        nav a:hover {color: yellow;}
-        p{text-align: center;}
-        p{height: 300px;}
-        button{touch-action: auto;}
-    </style>
+
+    <title>श्री राधा कृष्ण धाम | राधे राधे</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <h1> ब्रंदावन बांके बिहारी लाल की जय </h1>
-        <h2> राधे रानी की जय </h2>
-    </header>
-    <main><h1> राधाबल्लभ लाल की जय </h1></main>
-    <nav>
-        <a href="#">होमपेज</a>
-        <a href="#">राधा</a>
-        <a href="#">बांके बिहारी</a>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        🪷 <span>राधे राधे</span>
+    </div>
+
+    <nav id="navMenu">
+        <a href="#home">होम</a>
+        <a href="#radha">राधा रानी</a>
+        <a href="#krishna">बांके बिहारी</a>
+        <a href="#jap">नाम जाप</a>
+        <a href="#gallery">गैलरी</a>
+        <a href="#contact">संपर्क</a>
     </nav>
-    <section>
-        <button onclick="radhaNaamGinti()"> राधा नाम गिनती </button>
-        <button onclick="krishnaNaamGinti()"> कृष्ण नाम गिनती </button>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="peacock">🦚</div>
+
+        <p class="small-title">॥ श्री राधे ॥</p>
+
+        <h1>
+            राधा कृष्ण की भक्ति में<br>
+            <span>डूब जाइए</span>
+        </h1>
+
+        <p class="hero-text">
+            प्रेम, भक्ति और शांति का दिव्य संसार
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#jap" class="btn primary-btn">
+                🙏 नाम जाप करें
+            </a>
+
+            <a href="#radha" class="btn secondary-btn">
+                🌸 राधा रानी
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= QUOTE ================= -->
+
+<section class="quote-section">
+
+    <div class="quote-box">
+
+        <div class="quote-icon">❝</div>
+
         <h2>
-            राधा नाम जाप:
-            <span id="radhaCount">0</span>
+            जहाँ प्रेम है, वहीं राधा हैं।
+            <br>
+            जहाँ भक्ति है, वहीं कृष्ण हैं।
         </h2>
-        <h2> 
-            कृष्ण नाम जाप:
-            <span id="krishnaCount">0</span>
-        </h2>
-        <p id="message"> श्री राधा कृष्ण नाम जाप करें </p>
-    </section>
-        
-    <footer>
-        <p>कॉपीराइट 2026 </p>
-    </footer>
-    <script>
-        let radhaCount =0;
-        let krishnaCount =0;
-        function radhaNaamGinti(){radhaCount++;
-            document.getElementById("radhaCount").innerHTML=radhaCount;
-            document.getElementById("message").innerHTML="श्री राधा कृष्ण नाम जाप करें";
-        }
-        function krishnaNaamGinti(){krishnaCount++;
-            document.getElementById("krishnaCount").innerHTML=krishnaCount;
-            document.getElementById("message").innerHTML="श्री राधा कृष्ण नाम जाप करें";
-        }
-    </script>
+
+        <p>
+            राधे राधे बोलने मात्र से मन को शांति और हृदय को आनंद मिलता है।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= RADHA ================= -->
+
+<section id="radha" class="section">
+
+    <div class="section-heading">
+
+        <p>🌸 श्री राधा रानी 🌸</p>
+
+        <h2>राधा रानी का दिव्य स्वरूप</h2>
+
+        <div class="line"></div>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <div class="info-image radha-image">
+            <div class="image-symbol">🌸</div>
+        </div>
+
+        <div class="info-content">
+
+            <span class="tag">श्री राधे</span>
+
+            <h3>राधा नाम ही प्रेम है</h3>
+
+            <p>
+                श्री राधा रानी प्रेम, करुणा और भक्ति की प्रतीक हैं।
+                उनका नाम भक्त के जीवन में प्रेम, शांति और सकारात्मकता
+                का संचार करता है।
+            </p>
+
+            <p>
+                भगवान श्री कृष्ण की भक्ति राधा रानी के बिना अधूरी मानी जाती है।
+                इसलिए भक्त प्रेम से कहते हैं —
+            </p>
+
+            <div class="special-text">
+                ॥ राधे राधे ॥
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= KRISHNA ================= -->
+
+<section id="krishna" class="section krishna-section">
+
+    <div class="section-heading">
+
+        <p>🦚 श्री बांके बिहारी 🦚</p>
+
+        <h2>बांके बिहारी लाल</h2>
+
+        <div class="line"></div>
+
+    </div>
+
+
+    <div class="info-card reverse">
+
+        <div class="info-image krishna-image">
+            <div class="image-symbol">🦚</div>
+        </div>
+
+        <div class="info-content">
+
+            <span class="tag">जय श्री कृष्ण</span>
+
+            <h3>वृंदावन के बांके बिहारी</h3>
+
+            <p>
+                श्री कृष्ण प्रेम, करुणा, ज्ञान और धर्म के प्रतीक हैं।
+                उनकी मधुर मुस्कान और बांसुरी की धुन भक्तों के हृदय को
+                आनंद से भर देती है।
+            </p>
+
+            <p>
+                प्रेम से बोलिए —
+            </p>
+
+            <div class="special-text">
+                ॥ जय श्री कृष्ण ॥
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= JAP ================= -->
+
+<section id="jap" class="jap-section">
+
+    <div class="section-heading white-heading">
+
+        <p>🙏 भक्ति और नाम जाप 🙏</p>
+
+        <h2>नाम जाप करें</h2>
+
+        <div class="line light-line"></div>
+
+    </div>
+
+
+    <div class="jap-container">
+
+        <!-- RADHA COUNTER -->
+
+        <div class="jap-card">
+
+            <div class="jap-icon">🌸</div>
+
+            <h3>राधा नाम जाप</h3>
+
+            <div id="radhaCount" class="counter">
+                0
+            </div>
+
+            <button onclick="radhaJap()" class="jap-btn">
+                राधे राधे 🙏
+            </button>
+
+            <button onclick="resetRadha()" class="reset-btn">
+                Reset
+            </button>
+
+        </div>
+
+
+        <!-- KRISHNA COUNTER -->
+
+        <div class="jap-card">
+
+            <div class="jap-icon">🦚</div>
+
+            <h3>कृष्ण नाम जाप</h3>
+
+            <div id="krishnaCount" class="counter">
+                0
+            </div>
+
+            <button onclick="krishnaJap()" class="jap-btn">
+                कृष्ण कृष्ण 🙏
+            </button>
+
+            <button onclick="resetKrishna()" class="reset-btn">
+                Reset
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section id="gallery" class="section">
+
+    <div class="section-heading">
+
+        <p>📸 दिव्य दर्शन</p>
+
+        <h2>राधा कृष्ण गैलरी</h2>
+
+        <div class="line"></div>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <div class="gallery-card">
+            <div class="gallery-placeholder">🌸</div>
+            <h3>राधा रानी</h3>
+            <p>श्री राधे</p>
+        </div>
+
+        <div class="gallery-card">
+            <div class="gallery-placeholder">🦚</div>
+            <h3>श्री कृष्ण</h3>
+            <p>जय श्री कृष्ण</p>
+        </div>
+
+        <div class="gallery-card">
+            <div class="gallery-placeholder">🪷</div>
+            <h3>वृंदावन</h3>
+            <p>राधे राधे</p>
+        </div>
+
+        <div class="gallery-card">
+            <div class="gallery-placeholder">🙏</div>
+            <h3>भक्ति</h3>
+            <p>हरि नाम जाप</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BHAJAN ================= -->
+
+<section class="bhajan-section">
+
+    <div class="section-heading">
+
+        <p>🎵 भक्ति संगीत</p>
+
+        <h2>भक्ति में मन लगाएँ</h2>
+
+        <div class="line"></div>
+
+    </div>
+
+
+    <div class="bhajan-card">
+
+        <div class="music-icon">🎵</div>
+
+        <div>
+
+            <h3>राधे राधे जपो चले आएंगे बिहारी</h3>
+
+            <p>
+                प्रेम और भक्ति के साथ श्री राधा-कृष्ण का स्मरण करें।
+            </p>
+
+        </div>
+
+        <button onclick="showBhajanMessage()">
+            ▶ सुनें
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact-section">
+
+    <div class="section-heading white-heading">
+
+        <p>🙏 संपर्क 🙏</p>
+
+        <h2>राधे राधे</h2>
+
+        <div class="line light-line"></div>
+
+    </div>
+
+    <p class="contact-text">
+        आपका स्वागत है। प्रेम से बोलिए —
+    </p>
+
+    <div class="big-radha">
+        ॥ राधे राधे ॥
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        🪷 राधे राधे 🪷
+    </div>
+
+    <p>
+        प्रेम • भक्ति • शांति
+    </p>
+
+    <div class="footer-links">
+
+        <a href="#home">होम</a>
+        <a href="#radha">राधा रानी</a>
+        <a href="#krishna">कृष्ण</a>
+        <a href="#jap">नाम जाप</a>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Radha Krishna Dham | जय श्री राधे 🙏
+    </div>
+
+</footer>
+
+
+<!-- ================= FLOATING BUTTON ================= -->
+
+<button class="top-btn" onclick="scrollTopPage()" id="topBtn">
+    ↑
+</button>
+
+
+<!-- ================= JAVASCRIPT FILE ================= -->
+
+<script src="script.js"></script>
+
 </body>
 </html>
